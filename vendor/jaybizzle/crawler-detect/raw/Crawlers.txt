@@ -218,6 +218,7 @@ cg-eye
 changedetection
 ChangesMeter
 Charlotte
+chatterino-api-cache
 CheckHost
 checkprivacy
 CherryPicker
@@ -273,6 +274,7 @@ DAP\/NetHTTP
 DareBoost
 DatabaseDriverMysqli
 DataCha0s
+DatadogSynthetics
 Datafeedwatch
 Datanyze
 DataparkSearch
@@ -399,10 +401,12 @@ fluffy
 Flunky
 flynxapp
 forensiq
+ForusP
 FoundSeoTool
 free thumbnails
 Freeuploader
 FreshRSS
+frontman
 Funnelback
 Fuzz Faster U Fool
 G-i-g-a-b-o-t
@@ -433,6 +437,7 @@ Go!Zilla
 Go-Ahead-Got-It
 Go-http-client
 go-mtasts\/
+gobuster
 gobyus
 Gofeed
 gofetch

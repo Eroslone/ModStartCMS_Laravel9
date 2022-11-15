@@ -6,7 +6,6 @@ namespace ModStart\Field;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
 use ModStart\Core\Dao\ModelUtil;
@@ -593,19 +592,12 @@ class AbstractField implements Renderable
                     if (is_array($item->{$column})) {
                         return join(', ', $item->{$column});
                     }
-                    if (str_contains($column, '.')) {
-                        $value = (string)ModelUtil::traverse($item, $column);
-                        // echo $column . ' - ' . json_encode($value) . "\n";
-                    } else {
-                        $value = (string)$item->{$column};
-                    }
-                    return htmlspecialchars($value);
+                    return htmlspecialchars((string)$item->{$column});
             }
         } catch (\Throwable $e) {
-            Log::error('Field renderMode error - ' . $e->getMessage() . ' - ' . $e->getTraceAsString());
-            return new \Exception('Field renderMode error');
+            return \Exception('Field renderMode error');
         }
-        throw new \Exception('Field renderMode not exists');
+        throw new \Exception('Field renderMode error');
     }
 
     public function __call($method, $arguments)

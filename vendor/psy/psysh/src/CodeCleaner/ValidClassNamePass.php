@@ -3,7 +3,7 @@
 /*
  * This file is part of Psy Shell.
  *
- * (c) 2012-2020 Justin Hileman
+ * (c) 2012-2022 Justin Hileman
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -263,6 +263,8 @@ class ValidClassNamePass extends NamespaceAwarePass
      * @deprecated No longer used. Scope type should be passed into ensureCanDefine directly.
      * @codeCoverageIgnore
      *
+     * @throws FatalErrorException
+     *
      * @param Stmt $stmt
      *
      * @return string
@@ -276,6 +278,8 @@ class ValidClassNamePass extends NamespaceAwarePass
         } elseif ($stmt instanceof Trait_) {
             return self::TRAIT_TYPE;
         }
+
+        throw $this->createError('Unsupported statement type', $stmt);
     }
 
     /**

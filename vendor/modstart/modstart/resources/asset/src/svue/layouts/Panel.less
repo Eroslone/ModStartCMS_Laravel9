@@ -1,7 +1,10 @@
-:root, page {
-  --panel-color-bg: #FFF;
-}
+@color-dark: #1e1e2d;
 
+:root, page {
+  --color-dark-dark: darken(@color-dark, 10%);
+  --color-dark: @color-dark;
+  --color-dark-light: lighten(@color-dark, 10%);
+}
 
 .pb-layout-panel-dropdown {
   .el-dropdown-menu__item {
@@ -183,8 +186,8 @@
   bottom: 0px;
   width: 160px;
   overflow: auto;
-  background: var(--panel-color-bg);
-  color: var(--color-text);
+  background: var(--color-dark);
+  color: #FFF;
   transition: 0.5s;
 
   &.collapse {
@@ -231,7 +234,7 @@
   }
 
   .logo {
-    background: var(--panel-color-bg);
+    background: var(--color-dark);
     height: 50px;
     line-height: 50px;
     width: 100%;
@@ -266,7 +269,7 @@
   .el-menu, .el-submenu, .el-menu-item, .el-submenu__title {
     min-width: auto;
     background: transparent;
-    color: var(--color-text);
+    color: #FFF;
     font-size: var(--font-size, 0.65rem);
     line-height: 46px;
     padding: 0;
@@ -276,7 +279,7 @@
     i {
       width: 20px;
       display: inline-block;
-      color: var(--color-text);
+      color: #FFF;
     }
   }
 
@@ -306,7 +309,7 @@
 
       & > .el-menu {
         margin-left: -5px;
-        background: var(--panel-color-bg);
+        background: var(--color-dark);
       }
     }
 
@@ -326,7 +329,7 @@
 
       &.is-active {
         border-left: 5px solid transparent;
-        background: #EEE;
+        background: #2F3A45;
       }
     }
   }
@@ -334,17 +337,17 @@
 
 .el-menu--vertical {
   .el-menu {
-    background: var(--panel-color-bg);
-    border: 1px solid var(--panel-color-bg);
+    background: var(--color-dark);
+    border: 1px solid var(--color-dark);
 
     .el-menu-item {
-      color: var(--color-text);
+      color: #FFF;
       height: 42px;
       line-height: 42px;
       font-size: 13px;
 
       &:hover, &:focus {
-        background: var(--panel-color-bg);
+        background: var(--color-dark);
       }
 
       &.is-active {
@@ -353,11 +356,11 @@
     }
 
     .el-submenu__title {
-      color: var(--color-text);
+      color: #FFF;
       font-size: 13px;
 
       &:hover, &:focus {
-        background: var(--panel-color-bg);
+        background: var(--color-dark);
       }
     }
   }
@@ -422,14 +425,14 @@
       width: 38%;
       z-index: 100;
       padding-right: 0px;
-      background: var(--panel-color-bg);
+      background: var(--color-dark);
       text-align: left;
 
       .item {
         display: block;
         height: auto;
         line-height: 1.5em;
-        border-bottom: 1px solid var(--panel-color-bg);
+        border-bottom: 1px solid var(--color-dark);
         margin: 0px;
         color: #FFF;
         text-align: left;

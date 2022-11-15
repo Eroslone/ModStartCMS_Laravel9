@@ -1,0 +1,25 @@
+{
+    "name": "Blog",
+    "title": "博客系统",
+    "types": [
+        "PC",
+        "Mobile"
+    ],
+    "require": [
+        "Partner",
+        "Banner",
+        "Vendor:>=1.1.0"
+    ],
+    "env": [
+        "laravel5",
+        "laravel9"
+    ],
+    "version": "2.2.0",
+    "author": "ModStart",
+    "description": "提供一个基础的博客系统",
+    "suggest": [
+        "Member"
+    ],
+    "config": {
+    }
+}

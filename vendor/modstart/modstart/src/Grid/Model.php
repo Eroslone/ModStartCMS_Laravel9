@@ -301,7 +301,6 @@ class Model
      */
     private function fetch()
     {
-        // print_r($this->getQueries()->toArray());exit();
         if ($this->paginator) {
             return $this->paginator->getCollection();
         }

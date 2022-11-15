@@ -212,16 +212,13 @@ class EloquentRepository extends Repository
      */
     public function get(\ModStart\Grid\Model $model)
     {
-        // print_r($model->getQueries()->toArray());exit();
         $this->setOrder($model);
         $this->setPaginate($model);
         $query = $this->newQuery();
-        // var_dump($this->relations);exit();
-        // $this->relations = ['doc','memberUser'];
         if ($this->relations) {
             $query->with($this->relations);
         }
-        // print_r($model->getQueries()->toArray());exit();
+
         $treePid = $this->getArgument('treePid', null);
         if (null !== $treePid) {
             $query->where($this->getTreePidColumn(), $treePid);
@@ -229,7 +226,6 @@ class EloquentRepository extends Repository
         $model->grid()->repositoryFilter()->executeQueries($query);
         $model->grid()->scopeExecuteQueries($query);
         $tableColumns = $this->getTableColumns();
-        // var_dump($model->grid()->isDynamicModel());exit();
         if ($model->grid()->isDynamicModel()) {
             foreach ($tableColumns as $k => $v) {
                 if ($v == '*') {
@@ -237,10 +233,9 @@ class EloquentRepository extends Repository
                 }
             }
         }
-        // print_r($model->getQueries()->toArray());exit();
+        // var_dump($model->getQueries());exit();
         // var_dump($model->grid()->isDynamicModel());exit();
         $joins = $model->grid()->gridFilterJoins();
-        // var_dump($joins);exit();
         if (!empty($joins)) {
             $methodMap = [
                 'left' => 'leftJoin',
@@ -253,9 +248,8 @@ class EloquentRepository extends Repository
                 call_user_func_array([$query, $methodMap[$mode]], $join);
             }
         }
-        // print_r($model->getQueries()->toArray());exit();
+        // var_dump($model->getQueries());exit();
         $model->getQueries()->each(function ($value) use (&$query, $tableColumns) {
-            // print_r($value);
             if ($value['method'] == 'paginate') {
                 $value['arguments'][1] = $tableColumns;
             } elseif ($value['method'] == 'get') {

@@ -196,15 +196,6 @@ class Request
     }
 
     /**
-     * check if current request is get
-     * @return bool
-     */
-    public static function isGet()
-    {
-        return \Illuminate\Support\Facades\Request::isMethod('get');
-    }
-
-    /**
      * check if current request is post
      * @return bool
      */

@@ -24,7 +24,6 @@ return [
                 'mp4',
                 'pdf', 'txt', 'ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'csv',
                 'zip',
-                'epub',
             ]
         ],
         'document' => [

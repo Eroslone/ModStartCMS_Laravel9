@@ -179,9 +179,11 @@
         }
     }
 
-    .ub-header {
+    body.ub-header-show {
+        overflow: hidden;
 
-        &.show {
+        .ub-header {
+
             .menu-mask {
                 content: '';
                 display: block;
@@ -859,8 +861,8 @@
 
 .ub-header-c {
     height: 3rem;
-    border-bottom: 0.05rem solid var(--color-body-line);
-    background: var(--color-content-bg);
+    border-bottom: 0.05rem solid #EEE;
+    background: #FFF;
     overflow: hidden;
     position: fixed;
     text-align: center;
@@ -899,9 +901,8 @@
             padding: 0.2rem 0.5rem 0.2rem 0.75rem;
             width: 30%;
             max-width: 30em;
-            border: 1px solid var(--color-body-line);
+            border: 1px solid var(--color-primary);
             position: relative;
-            background-color: var(--color-body-bg);
 
             .input {
                 height: 1.5rem;
@@ -910,26 +911,25 @@
                 padding: 0 1.5rem 0 0;
                 border: none;
                 background: none;
-                color: var(--color-text);
+                color: #333;
             }
 
             .submit {
                 position: absolute;
-                right: 0px;
-                top: 0px;
-                height: 1.9rem;
+                right: -1px;
+                top: -1px;
+                height: 2rem;
                 border: none;
                 outline: none;
                 font-size: 0.7rem;
-                color: var(--color-text);
+                color: #FFF;
                 cursor: pointer;
-                background: var(--color-body-bg);
+                background: var(--color-primary);
                 border-radius: 0 1rem 1rem 0;
                 padding: 0 0.6rem 0 0.5rem;
 
                 &:hover {
-                    background: var(--color-body-bg);
-                    color: var(--color-primary);
+                    background: var(--color-primary-dark);
                 }
             }
         }
@@ -957,7 +957,7 @@
 
         .item-icon {
             vertical-align: middle;
-            color: var(--color-text);
+            color: #333;
             display: inline-block;
             padding: 0 0.6rem;
             margin-top: -0.2rem;
@@ -1074,7 +1074,7 @@
         .search {
             display: none;
             padding: 0 0.5rem 0.5rem 0.5rem;
-            background: var(--color-content-bg);
+            background: #FFF;
             position: fixed;
             top: 3rem;
             left: 0;
@@ -1287,7 +1287,7 @@
         left: 0;
         right: 0;
         z-index: 10000;
-        background: var(--color-content-bg);
+        background: #FFF;
     }
 
     .header-container {
@@ -1296,8 +1296,8 @@
         right: 0;
         height: 50px;
         z-index: 500;
-        box-shadow: 0 1px 1px var(--color-body-line);
-        background: var(--color-content-bg);
+        box-shadow: 0 1px 1px #EEE;
+        background: #FFF;
 
         .body {
             display: flex;

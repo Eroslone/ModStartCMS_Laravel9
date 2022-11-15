@@ -12,9 +12,10 @@ namespace ModStart\Core\Util;
 class RandomUtil
 {
     /**
-     * @Util 随机数字
+     * 随机数字
      * @param $length int 长度
      * @return string 字符串
+     * @Util
      */
     public static function number($length)
     {
@@ -24,9 +25,10 @@ class RandomUtil
 
 
     /**
-     * @Util 随机字符串
+     * 随机字符串
      * @param $length int 长度
      * @return string 字符串
+     * @Util
      */
     public static function string($length)
     {
@@ -35,10 +37,11 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机可读字符串
+     * 随机可读字符串
      * @param $length int 长度
      * @return string 字符串
      * @desc 去掉0、O等相似字符
+     * @Util
      */
     public static function readableString($length)
     {
@@ -47,29 +50,10 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机可读字符串（小写）
+     * 随机Hex字符串
      * @param $length int 长度
      * @return string 字符串
-     */
-    public static function lowerReadableString($length)
-    {
-        return strtolower(self::readableString($length));
-    }
-
-    /**
-     * @Util 随机可读字符串（大写）
-     * @param $length int 长度
-     * @return string 字符串
-     */
-    public static function upperReadableString($length)
-    {
-        return strtoupper(self::readableString($length));
-    }
-
-    /**
-     * @Util 随机Hex字符串
-     * @param $length int 长度
-     * @return string 字符串
+     * @Util
      */
     public static function hexString($length)
     {
@@ -78,9 +62,10 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机小写字符串
+     * 随机小写字符串
      * @param $length int 长度
      * @return string 字符串
+     * @Util
      */
     public static function lowerString($length)
     {
@@ -89,10 +74,11 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机小写字符串
+     * 随机小写字符串
      * @param $length int 长度
      * @return string 字符串
      * @desc 只包含字母
+     * @Util
      */
     public static function lowerChar($length)
     {
@@ -101,10 +87,11 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机大写字符串
+     * 随机大写字符串
      * @param $length int 长度
      * @return string 字符串
      * @desc 只包含字母
+     * @Util
      */
     public static function upperChar($length)
     {
@@ -113,9 +100,10 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机大写字符串
+     * 随机大写字符串
      * @param $length int 长度
      * @return string 字符串
+     * @Util
      */
     public static function upperString($length)
     {
@@ -124,9 +112,11 @@ class RandomUtil
     }
 
     /**
-     * @Util 随机UUID
+     * 随机UUID
      * @return string UUID
      * @desc 使用年月日构造
+     *
+     * @Util
      */
     public static function uuid()
     {

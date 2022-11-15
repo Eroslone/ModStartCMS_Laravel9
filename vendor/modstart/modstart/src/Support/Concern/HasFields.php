@@ -60,15 +60,13 @@ use ModStart\Layout\LayoutTab;
  * @method \ModStart\Field\Hidden         hidden($column, $label = '')
  * @method \ModStart\Field\Icon           icon($column, $label = '')
  * @method \ModStart\Field\Custom         custom($column, $label = '')
- * @method \ModStart\Field\Button         button($column, $label = '')
  *
  * $callback = function (LayoutGrid $layout) { $layout->layoutColumn(4, function ($builder) { }); });
- * @method \ModStart\Layout\LayoutGrid        layoutGrid($callback)
+ * @method \ModStart\Layout\LayoutGrid    layoutGrid($callback)
  * $callback = function (LayoutTab $layout) { $layout->tab('title',closure});
- * @method \ModStart\Layout\LayoutTab         layoutTab($callback)
+ * @method \ModStart\Layout\LayoutTab     layoutTab($callback)
  * $callback = function (Form $form) { });
- * @method \ModStart\Layout\LayoutPanel       layoutPanel($title, $callback)
- * @method \ModStart\Layout\LayoutSeparator   layoutSeparator($title)
+ * @method \ModStart\Layout\LayoutPanel   layoutPanel($title, $callback)
  */
 trait HasFields
 {

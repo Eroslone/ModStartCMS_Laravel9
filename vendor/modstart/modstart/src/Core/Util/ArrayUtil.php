@@ -4,6 +4,9 @@ namespace ModStart\Core\Util;
 
 /**
  * 数据工具包
+ *
+ * Class ArrayUtil
+ * @package ModStart\Core\Util
  */
 class ArrayUtil
 {
